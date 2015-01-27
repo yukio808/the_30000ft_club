@@ -67,3 +67,7 @@ function round( array ){
   for (var i = 0; i > 0; i++) {
     
 }
+
+//loser & winner page
+//if player1 wins link to winner.html
+//if aiChoice wins link to loser.html
