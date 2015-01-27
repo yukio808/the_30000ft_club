@@ -18,33 +18,30 @@ if (aiChoice < 0.36){
 
 
 //compare results
-function compare(choice1, choice2){
-  //if, else 
-  if (choice1 === choice2){
+function compare(playerchoice, aichoice){
+  if (playerchoice === aichoice){
     return "It's a tie";
-  }else if (choice1 === "paper"){
-    if (choice2 === "rock"){
-      return "paper wins";
-    }else{
-      return "scissors wins";
+  }else if (playerchoice === "paper"){
+    if (aichoice === "rock"){
+      return "Player wins";
+   }else{
+     return "Computer wins";
     }
-  }else if (choice1 === "scissors"){
-    if (choice2 === "rock"){
-      return "rock wins";
+  }else if (playerchoice === "scissors"){
+    if (aichoice === "paper"){
+      return "Player wins";
     }else{
-      return "paper wins";
+      return "Computer wins";
     }
-  }else if (choice1 === "rock"){
-    if (choice2 === "paper"){
-      return "paper wins";
+  }else if (playerchoice === "rock"){
+    if (aichoice === "scissors"){
+      return "Player wins";
     }else{
-      return "scissors";
+      return "Computer wins";
     }
   }
 }
-//Return response
-return compare(player1, aiChoice);
-
+compare(playerchoice, aiChoice);
 
 //:: Bonus ::
 
@@ -64,10 +61,10 @@ return compare(player1, aiChoice);
 
 //:: Round Count :: 
 function round( array ){
-  for (var i = 0; i > 0; i++) {
-    
+
 }
 
 //loser & winner page
 //if player1 wins link to winner.html
 //if aiChoice wins link to loser.html
+
