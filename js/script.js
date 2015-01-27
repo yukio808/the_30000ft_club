@@ -1,47 +1,65 @@
 //Script for Rock, Paper, Scissors
 
 //User input
-var player1 = prompt("Choose Rock, Paper, Scissors");
+function letPlay(){
 
-//Computer choices
-var aiChoice = Math.random;
+  var player1 = document.getElementById('playerSays');
+  prompt("Choose Rock, Paper, Scissors");
 
-if (aiChoice < 0.36){
-  aiChoice = "Paper";
-
-}else if(aiChoice >= 0.68){
-  aiChoice = "Rock";
-
-}else{
-  aiChoice = "Scissors";
 }
+//Computer choices
+function computer(aiChoice){
 
+  aiChoice = Math.random();
+
+  if (aiChoice < 0.36){
+    aiChoice = "Paper";
+
+  }else if(aiChoice >= 0.68){
+    aiChoice = "Rock";
+
+  }else{
+    aiChoice = "Scissors";
+  }
+}
+//print aiChoice to div
+var computerSays = document.getElementById("computer_results");
 
 //compare results
 function compare(playerchoice, aichoice){
   if (playerchoice === aichoice){
     return "It's a tie";
+
   }else if (playerchoice === "paper"){
     if (aichoice === "rock"){
-      return "Player wins";
-   }else{
-     return "Computer wins";
+      return "You Win";
+    }else{
+      return "Computer Wins";
     }
-  }else if (playerchoice === "scissors"){
+  }else if (playerchoice1 === "scissors"){
+    if (aichoice === "rock"){
+      return "Computer Wins";
+    }else{
+      return "You Win";
+    }
+  }else if (playerchoice1 === "rock"){
     if (aichoice === "paper"){
-      return "Player wins";
+      return "Computer Wins";
     }else{
-      return "Computer wins";
-    }
-  }else if (playerchoice === "rock"){
-    if (aichoice === "scissors"){
-      return "Player wins";
-    }else{
-      return "Computer wins";
+      return "You Win";
     }
   }
+
 }
-compare(playerchoice, aiChoice);
+document.getElementById("game_outcome").innerHTML = compare();
+
+//Print response to div
+/*compare(player1, aiChoice);*/
+
+//loser & winner page
+//if player1 wins link to winner.html
+
+//if aiChoice wins link to loser.html
 
 //:: Bonus ::
 
@@ -55,16 +73,22 @@ compare(playerchoice, aiChoice);
 
   //return outcome
 
-//:: Create AI::
-//create function that takes the average used choices and it makes its choices based on most common choice. 
-
+//:: Create AI that LEARNS ::
 
 //:: Round Count :: 
-function round( array ){
+/*function score_counter(){
+  var comparing = this.compare();
+  if(comparing === "You Win"){
+    var result = 1;
+    document.getElementById("player_score").innerHTML = result;
+    
+  }else if(comparing === "Computer Wins"){
+    var result1 = 1;
+    document.getElementById("computer_score").innerHTML = result1;
+  }
 
 }
-
+*/
 //loser & winner page
 //if player1 wins link to winner.html
 //if aiChoice wins link to loser.html
-
