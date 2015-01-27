@@ -1,7 +1,7 @@
 //Script for Rock, Paper, Scissors
 
 //User input
-var player1 = promt("Choose Rock, Paper, Scissors");
+var player1 = prompt("Choose Rock, Paper, Scissors");
 
 //Computer choices
 var aiChoice = Math.random;
@@ -16,11 +16,10 @@ if (aiChoice < 0.36){
   aiChoice = "Scissors";
 }
 
-return aichoice;
 
 //compare results
 function compare(choice1, choice2){
-  //create if else if else statements
+  //if, else 
   if (choice1 === choice2){
     return "It's a tie";
   }else if (choice1 === "paper"){
@@ -46,7 +45,6 @@ function compare(choice1, choice2){
 //Return response
 return compare(player1, aiChoice);
 
-//Return overall outcome
 
 //:: Bonus ::
 
