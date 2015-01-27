@@ -1,52 +1,57 @@
 //Script for Rock, Paper, Scissors
 
 //User input
-function letPlay(){
+var player1 = prompt("Choose Rock, Paper, Scissors");
 
-  var player1 = document.getElementById('playerSays');
-  prompt("Choose Rock, Paper, Scissors");
+function letsPlay(){
+
+  var player = document.getElementById('playerSays');
 
 }
+
 //Computer choices
-function computer(aiChoice){
+var aiChoice = Math.random();
 
-  aiChoice = Math.random();
+//print aiChoice to div
+  if (aiChoice < 0.34){
+    aiChoice = "paper";
 
-  if (aiChoice < 0.36){
-    aiChoice = "Paper";
-
-  }else if(aiChoice >= 0.68){
-    aiChoice = "Rock";
+  }else if(aiChoice >= 0.67){
+    aiChoice = "rock";
 
   }else{
-    aiChoice = "Scissors";
+    aiChoice = "scissors";
+    
   }
-}
-//print aiChoice to div
-var computerSays = document.getElementById("computer_results");
+
+var computerOutput = document.getElementById('computer_results').innerHTML = aiChoice;
+
 
 //compare results
-function compare(playerchoice, aichoice){
-  if (playerchoice === aichoice){
-    return "It's a tie";
+function compare(choice1, choice2){
+  //if, else 
+  if (choice1 === choice2){
+    return " It's a tie";
+  }else if (choice1 === "paper"){
+    if (choice2 === "rock"){
+      return " You Win";
+    }else{
+      return " Computer Wins";
+    }
 
-  }else if (playerchoice === "paper"){
-    if (aichoice === "rock"){
-      return "You Win";
+  }else if (choice1 === "scissors"){
+    if (choice2 === "rock"){
+      return " Computer Wins";
     }else{
-      return "Computer Wins";
+      return " You Win";
     }
-  }else if (playerchoice1 === "scissors"){
-    if (aichoice === "rock"){
-      return "Computer Wins";
+
+  }else if (choice1 === "rock"){
+    if (choice2 === "paper"){
+      return " Computer Wins";
+
     }else{
-      return "You Win";
-    }
-  }else if (playerchoice1 === "rock"){
-    if (aichoice === "paper"){
-      return "Computer Wins";
-    }else{
-      return "You Win";
+      return " You Win";
     }
   }
 
@@ -54,12 +59,9 @@ function compare(playerchoice, aichoice){
 document.getElementById("game_outcome").innerHTML = compare();
 
 //Print response to div
-/*compare(player1, aiChoice);*/
 
-//loser & winner page
-//if player1 wins link to winner.html
+var winnerDiv = document.getElementById('game_outcome').innerHTML = compare(player1, aiChoice);
 
-//if aiChoice wins link to loser.html
 
 //:: Bonus ::
 
