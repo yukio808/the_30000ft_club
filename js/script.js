@@ -9,20 +9,22 @@ function letPlay(){
 }
 
 //Computer choices
-function computer(aiChoice){
-
-  aiChoice = Math.random();
+ var aiChoice = Math.random();
 //print aiChoice to div
   if (aiChoice < 0.34){
+    
     aiChoice = "paper";
 
   }else if(aiChoice >= 0.67){
+
     aiChoice = "rock";
 
   }else{
+
     aiChoice = "scissors";
   }
-}
+
+
 
 
 //compare results
