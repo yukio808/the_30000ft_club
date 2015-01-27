@@ -14,13 +14,13 @@ var aiChoice = Math.random();
 
 //print aiChoice to div
   if (aiChoice < 0.34){
-    aiChoice = " paper";
+    aiChoice = "paper";
 
   }else if(aiChoice >= 0.67){
-    aiChoice = " rock";
+    aiChoice = "rock";
 
   }else{
-    aiChoice = " scissors";
+    aiChoice = "scissors";
     
   }
 
