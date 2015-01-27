@@ -1,66 +1,61 @@
 //Script for Rock, Paper, Scissors
 
 //User input
-function letPlay(){
+var player1 = prompt("Choose Rock, Paper, Scissors");
 
-  var player1 = document.getElementById('playerSays');
-  prompt("Choose Rock, Paper, Scissors");
+function letsPlay(){
+
+  var player = document.getElementById('playerSays');
 
 }
 
 //Computer choices
- var aiChoice = Math.random();
+var aiChoice = Math.random();
+
 //print aiChoice to div
   if (aiChoice < 0.34){
-    
-    aiChoice = "paper";
+    aiChoice = " paper";
 
   }else if(aiChoice >= 0.67){
-
-    aiChoice = "rock";
+    aiChoice = " rock";
 
   }else{
-
-    aiChoice = "scissors";
+    aiChoice = " scissors";
+    
   }
 
-
+var computerOutput = document.getElementById('computer_results').innerHTML = aiChoice;
 
 
 //compare results
 function compare(choice1, choice2){
   //if, else 
   if (choice1 === choice2){
-    return "It's a tie";
+    return " It's a tie";
   }else if (choice1 === "paper"){
     if (choice2 === "rock"){
-      return "You Win";
+      return " You Win";
     }else{
-      return "Computer Wins";
+      return " Computer Wins";
     }
   }else if (choice1 === "scissors"){
     if (choice2 === "rock"){
-      return "Computer Wins";
+      return " Computer Wins";
     }else{
-      return "You Win";
+      return " You Win";
     }
   }else if (choice1 === "rock"){
     if (choice2 === "paper"){
-      return "Computer Wins";
+      return " Computer Wins";
     }else{
-      return "You Win";
+      return " You Win";
     }
   }
 
 }
 
 //Print response to div
-compare(player1, aiChoice);
-
-//loser & winner page
-//if player1 wins link to winner.html
-
-//if aiChoice wins link to loser.html
+var winnerDiv = document.getElementById('game_outcome').innerHTML = compare(player1, aiChoice);
 
 //:: Bonus ::
 
