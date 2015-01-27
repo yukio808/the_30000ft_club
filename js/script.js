@@ -1,21 +1,29 @@
 //Script for Rock, Paper, Scissors
 
 //User input
-var player1 = prompt("Choose Rock, Paper, Scissors");
+function letPlay(){
 
-//Computer choices
-var aiChoice = Math.random;
+  var player1 = document.getElementById('playerSays');
+  prompt("Choose Rock, Paper, Scissors");
 
-if (aiChoice < 0.36){
-  aiChoice = "Paper";
-
-}else if(aiChoice >= 0.68){
-  aiChoice = "Rock";
-
-}else{
-  aiChoice = "Scissors";
 }
+//Computer choices
+function computer(aiChoice){
 
+  aiChoice = Math.random();
+
+  if (aiChoice < 0.36){
+    aiChoice = "Paper";
+
+  }else if(aiChoice >= 0.68){
+    aiChoice = "Rock";
+
+  }else{
+    aiChoice = "Scissors";
+  }
+}
+//print aiChoice to div
+var computerSays = document.documentElementByID('computer_score');
 
 //compare results
 function compare(choice1, choice2){
@@ -24,27 +32,33 @@ function compare(choice1, choice2){
     return "It's a tie";
   }else if (choice1 === "paper"){
     if (choice2 === "rock"){
-      return "paper wins";
+      return "You Win";
     }else{
-      return "scissors wins";
+      return "Computer Wins";
     }
   }else if (choice1 === "scissors"){
     if (choice2 === "rock"){
-      return "rock wins";
+      return "Computer Wins";
     }else{
-      return "paper wins";
+      return "You Win";
     }
   }else if (choice1 === "rock"){
     if (choice2 === "paper"){
-      return "paper wins";
+      return "Computer Wins";
     }else{
-      return "scissors";
+      return "You Win";
     }
   }
-}
-//Return response
-return compare(player1, aiChoice);
 
+}
+
+//Print response to div
+compare(player1, aiChoice);
+
+//loser & winner page
+//if player1 wins link to winner.html
+
+//if aiChoice wins link to loser.html
 
 //:: Bonus ::
 
@@ -58,16 +72,8 @@ return compare(player1, aiChoice);
 
   //return outcome
 
-//:: Create AI::
-//create function that takes the average used choices and it makes its choices based on most common choice. 
-
+//:: Create AI that LEARNS ::
 
 //:: Round Count :: 
-function round( array ){
-  for (var i = 0; i > 0; i++) {
-    
-}
 
-//loser & winner page
-//if player1 wins link to winner.html
-//if aiChoice wins link to loser.html
+

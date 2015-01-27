@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Game main</title>
+  <title>Main Game</title>
 </head>
 <script>
 </script>
 <body>
-  <div id="round_header">
-    <h1></h1>
-  </div>
-  <div id="computer_score"></div>
-  <div id="player_score"></div>
-  <form action="main.html">
-    <span style="font-family: Lucida Console, courier, monospace; font-size:20px">Rock, Paper, or Scissors:</span><br/>
-    <input type="text" name="name"><br/>
-    <input type="submit" value="submit">
-  </form>
-  <div id="img">
-  </div>
+  <header>
+    <h1>Welcome to the 30K RPS Club</h1>
+  </header>
+  <section>
+    <div id="player_score">0</div>
+    <div id="computer_score">0</div>
+  </section>
+  <div id="playerSays" onclick="letPlay()">
+    Let's Play
+    <!--button to open promt response-->
+  </div>  
+  <div id="results">0</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
