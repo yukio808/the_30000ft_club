@@ -7,23 +7,23 @@ function letPlay(){
   prompt("Choose Rock, Paper, Scissors");
 
 }
+
 //Computer choices
 function computer(aiChoice){
 
   aiChoice = Math.random();
+//print aiChoice to div
+  if (aiChoice < 0.34){
+    aiChoice = "paper";
 
-  if (aiChoice < 0.36){
-    aiChoice = "Paper";
-
-  }else if(aiChoice >= 0.68){
-    aiChoice = "Rock";
+  }else if(aiChoice >= 0.67){
+    aiChoice = "rock";
 
   }else{
-    aiChoice = "Scissors";
+    aiChoice = "scissors";
   }
 }
-//print aiChoice to div
-var computerSays = document.documentElementByID('computer_score');
+
 
 //compare results
 function compare(choice1, choice2){
